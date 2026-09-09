@@ -18,7 +18,13 @@ export async function signUp(formData: FormData) {
   if (!supabase) redirect("/login?error=Configuration+Supabase+manquante");
   const email = String(formData.get("email") ?? "");
   const password = String(formData.get("password") ?? "");
+<<<<<<< ours
   const { error } = await supabase.auth.signUp({ email, password });
   if (error) redirect(`/login?error=${encodeURIComponent(error.message)}`);
+=======
+  const { data, error } = await supabase.auth.signUp({ email, password });
+  if (error) redirect(`/login?error=${encodeURIComponent(error.message)}`);
+  if (!data.session) redirect("/login?message=Consultez+votre+email+pour+confirmer+votre+compte");
+>>>>>>> theirs
   redirect("/");
 }

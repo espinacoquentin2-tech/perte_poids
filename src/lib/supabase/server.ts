@@ -5,8 +5,13 @@ import { getSupabaseConfig, hasSupabaseConfig } from "./config";
 export async function createClient() {
   if (!hasSupabaseConfig) return null;
   const cookieStore = await cookies();
+<<<<<<< ours
   const { url, key } = getSupabaseConfig();
   return createServerClient(url, key, {
+=======
+  const { url, publishableKey } = getSupabaseConfig();
+  return createServerClient(url, publishableKey, {
+>>>>>>> theirs
     cookies: {
       getAll: () => cookieStore.getAll(),
       setAll(cookiesToSet) {

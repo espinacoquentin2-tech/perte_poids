@@ -1,7 +1,11 @@
 import type { TodayData } from "@/types/domain";
 
 export const demoToday: TodayData = {
+<<<<<<< ours
   profile: { firstName: "Alex", targetWeight: 79.9, stepGoal: 10_000 },
+=======
+  profile: { firstName: "Alex", targetWeight: 79.9, stepGoal: 10_000, timezone: "Europe/Paris" },
+>>>>>>> theirs
   weight: 86.4,
   weightAverage7d: 86.8,
   steps: 6_420,

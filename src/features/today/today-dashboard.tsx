@@ -17,7 +17,11 @@ export function TodayDashboard({ data, demo }: { data: TodayData; demo: boolean 
   const tasks = [...data.meals.map((meal) => meal.eaten), Boolean(data.workout?.completed), data.steps >= data.profile.stepGoal];
   const completed = tasks.filter(Boolean).length;
   const progress = tasks.length ? Math.round((completed / tasks.length) * 100) : 0;
+<<<<<<< ours
   const date = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long" }).format(new Date());
+=======
+  const date = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: data.profile.timezone }).format(new Date());
+>>>>>>> theirs
   const lunch = data.meals.find((meal) => meal.type === "lunch");
   const dinner = data.meals.find((meal) => meal.type === "dinner");
 

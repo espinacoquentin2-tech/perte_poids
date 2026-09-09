@@ -1,6 +1,12 @@
 node_modules
 .next
+<<<<<<< ours
 .env*.local
+=======
+.env
+.env.*
+!.env.example
+>>>>>>> theirs
 *.tsbuildinfo
 .DS_Store
 

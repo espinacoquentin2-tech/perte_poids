@@ -3,4 +3,10 @@ import { updateSession } from "@/lib/supabase/middleware";
 
 export async function middleware(request: NextRequest) { return updateSession(request); }
 
+<<<<<<< ours
 export const config = { matcher: ["/((?!_next/static|_next/image|favicon.ico|icons/).*)"] };
+=======
+export const config = {
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|manifest.webmanifest|sw.js|icons/).*)"],
+};
+>>>>>>> theirs
