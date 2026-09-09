@@ -1,0 +1,10 @@
+node_modules
+.next
+.env*.local
+*.tsbuildinfo
+.DS_Store
+
+# Generated locally from the tracked SVG sources (see npm run icons:generate)
+public/icons/app-icon-192.png
+public/icons/app-icon-512.png
+public/icons/apple-touch-icon.png
